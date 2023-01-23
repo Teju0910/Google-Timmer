@@ -22,7 +22,7 @@ env:
 
   GKE_ZONE: us-central1
 
-  DEPLOYMENT_NAME: timmer
+  DEPLOYMENT_NAME: timmer-app
 
   USE_GKE_GCLOUD_AUTH_PLUGIN: True
 
