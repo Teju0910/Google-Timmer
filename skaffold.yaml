@@ -4,7 +4,7 @@ profiles:
   - name: timmer-app
     build:
       artifacts:
-        - image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/fruitsandveggiesngfrontend 
+        - image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/timmer
           context: .
           sync:
             infer:
@@ -19,7 +19,7 @@ profiles:
             valuesFiles:
               - ./timmer/values.yaml
             artifactOverrides:
-              image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/fruitsandveggiesngfrontend 
+              image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/timmer
             namespace: default
             skipBuildDependencies: true
             # useHelmSecrets: true
