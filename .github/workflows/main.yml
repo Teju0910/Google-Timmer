@@ -80,7 +80,7 @@ jobs:
 
       - run: |-
 
-          gcloud --quiet auth configure-docker asia-southeast1-docker.pkg.dev
+          gcloud --quiet auth configure-docker asia-south1-docker.pkg.dev
 
       # Install kubectl
 
