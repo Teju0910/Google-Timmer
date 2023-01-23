@@ -17,13 +17,13 @@ on:
 env:
 
   GAR_LOCATION: us-central1
-
+  
   GKE_CLUSTER: timmer
-
+  
   GKE_ZONE: us-central1
-
+  
   DEPLOYMENT_NAME: timmer
-
+  
   USE_GKE_GCLOUD_AUTH_PLUGIN: True
 
 
