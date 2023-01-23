@@ -129,7 +129,7 @@ jobs:
 
       - name: Build and then deploy to GKE cluster with Skaffold
 
-        run: skaffold run -p timmer-app --default-repo asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/timmer --status-check
+        run: skaffold run -p timmer --default-repo asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/timmer --status-check
 
 
 
