@@ -1,0 +1,31 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+profiles:
+  - name: timmer-app
+    build:
+      artifacts:
+        - image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/fruitsandveggiesngfrontend 
+          context: .
+          sync:
+            infer:
+              - schema.gql
+              - src/**/*.*
+              - prisma/**/*.*
+    deploy:
+      helm:
+        releases:
+          - name: timmer
+            chartPath: ./timmer
+            valuesFiles:
+              - ./timmer/values.yaml
+            artifactOverrides:
+              image: asia-south1-docker.pkg.dev/convint-testing/tejasvini-testing/fruitsandveggiesngfrontend 
+            namespace: default
+            skipBuildDependencies: true
+            # useHelmSecrets: true
+            imageStrategy:
+              helm: {}
+        flags:
+          upgrade:
+            - --install
+      statusCheckDeadlineSeconds: 500
